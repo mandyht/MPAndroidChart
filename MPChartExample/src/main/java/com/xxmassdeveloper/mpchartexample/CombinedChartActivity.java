@@ -105,7 +105,7 @@ public class CombinedChartActivity extends DemoBase {
         chart.invalidate();
     }
 
-    private LineData generateLineData() {
+    LineData generateLineData() {
 
         LineData d = new LineData();
 
@@ -131,7 +131,7 @@ public class CombinedChartActivity extends DemoBase {
         return d;
     }
 
-    private BarData generateBarData() {
+    BarData generateBarData() {
 
         ArrayList<BarEntry> entries1 = new ArrayList<>();
         ArrayList<BarEntry> entries2 = new ArrayList<>();
@@ -170,7 +170,7 @@ public class CombinedChartActivity extends DemoBase {
         return d;
     }
 
-    private ScatterData generateScatterData() {
+    ScatterData generateScatterData() {
 
         ScatterData d = new ScatterData();
 
@@ -189,7 +189,7 @@ public class CombinedChartActivity extends DemoBase {
         return d;
     }
 
-    private CandleData generateCandleData() {
+    CandleData generateCandleData() {
 
         CandleData d = new CandleData();
 
@@ -209,7 +209,7 @@ public class CombinedChartActivity extends DemoBase {
         return d;
     }
 
-    private BubbleData generateBubbleData() {
+    BubbleData generateBubbleData() {
 
         BubbleData bd = new BubbleData();
 
