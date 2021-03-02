@@ -7,7 +7,6 @@ import static org.junit.Assert.assertFalse;
 import android.view.View;
 
 import com.github.mikephil.charting.charts.CombinedChart;
-import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.CombinedData;
 import com.xxmassdeveloper.mpchartexample.CombinedChartActivity;
 import com.xxmassdeveloper.mpchartexample.R;

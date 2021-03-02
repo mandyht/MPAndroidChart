@@ -14,6 +14,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.ScatterData;
 import com.github.mikephil.charting.highlight.CombinedHighlighter;
+import com.github.mikephil.charting.highlight.CombinedHighlighterStub;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.interfaces.dataprovider.CombinedDataProvider;
 import com.github.mikephil.charting.interfaces.datasets.IDataSet;
@@ -92,6 +93,7 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
     @Override
     public void setData(CombinedData data) {
         super.setData(data);
+        //setHighlighter(new CombinedHighlighterStub(null));
         setHighlighter(new CombinedHighlighter(this, this));
         ((CombinedChartRenderer)mRenderer).createRenderers();
         mRenderer.initBuffers();
