@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'pmd'
 
 group='com.github.philjay'
 
@@ -43,6 +44,26 @@ task javadoc(type: Javadoc) {
 task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
+}
+
+task pmd(type: Pmd) {
+    description 'Identifying potential problems on best practices, code style, design, documentation, ' +
+            'error prone, multithreading, performance, and security'
+    group 'verification'
+    ignoreFailures = true
+    ruleSets = ["category/java/bestpractices.xml", "category/java/codestyle.xml",
+                "category/java/design.xml", "category/java/documentation.xml",
+                "category/java/errorprone.xml", "category/java/multithreading.xml",
+                "category/java/performance.xml", "category/java/security.xml"]
+
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
 }
 
 artifacts {
